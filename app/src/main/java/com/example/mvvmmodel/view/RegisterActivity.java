@@ -4,17 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 
 import androidx.annotation.Nullable;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.example.mvvmmodel.R;
 import com.example.mvvmmodel.base.BaseActivity;
 import com.example.mvvmmodel.databinding.ActivityRegisterBinding;
+import com.example.mvvmmodel.repository.remote.OnboardingApi;
+import com.example.mvvmmodel.util.ApiService;
+import com.example.mvvmmodel.util.ViewModelFactory;
 import com.example.mvvmmodel.vm.OnboardingViewModel;
 
 public class RegisterActivity extends BaseActivity<ActivityRegisterBinding, OnboardingViewModel> {
-
-
-
-
 
     @Override
     protected ActivityRegisterBinding inflateView(LayoutInflater inflater) {
@@ -23,7 +23,7 @@ public class RegisterActivity extends BaseActivity<ActivityRegisterBinding, Onbo
 
     @Override
     protected OnboardingViewModel getViewModel() {
-        return null;
+        return new  ViewModelProvider(this,OnboardingViewModel ).get(RegisterActivity.class);
     }
 
     @Override

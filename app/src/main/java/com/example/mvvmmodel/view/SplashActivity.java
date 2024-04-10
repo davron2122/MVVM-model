@@ -1,4 +1,4 @@
-package com.example.mvvmmodel;
+package com.example.mvvmmodel.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.mvvmmodel.view.RegisterActivity;
+import com.example.mvvmmodel.R;
 
 public class SplashActivity extends AppCompatActivity {
 
