@@ -36,7 +36,7 @@ public class PreferenceManager implements PreferenceHelper {
         } else if (value.getClass().equals(Boolean.class)) {
             mPreference.edit().putBoolean(key, (Boolean) value).apply();
         } else if (value.getClass().equals(User.class)) {
-            String json= new Gson().toJson(value);
+            String json = new Gson().toJson(value);
             setValue(key, json);
         }
     }
@@ -49,15 +49,17 @@ public class PreferenceManager implements PreferenceHelper {
             return mPreference.getBoolean(key, (Boolean) defaultValue);
         } else if (aClass.equals(User.class)) {
             String json = mPreference.getString(key, "");
-            if (!json.isEmpty()){
+            if (!json.isEmpty()) {
                 return new Gson().fromJson(json, User.class);
             }
+
 
         }
 
 
         return defaultValue;
     }
+
     @Override
     public void removeKey(String key) {
         mPreference.edit().remove(key).apply();

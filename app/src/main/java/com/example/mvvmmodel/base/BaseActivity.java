@@ -12,8 +12,8 @@ import androidx.viewbinding.ViewBinding;
 
 public abstract  class BaseActivity <VB extends ViewBinding, VM extends BaseViewModel>extends AppCompatActivity {
 
-    VB binding;
-    VM viewModel;
+    public  VB binding;
+    public VM viewModel;
 
     protected abstract VB inflateView(LayoutInflater inflater);
 
